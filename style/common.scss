@@ -1,0 +1,183 @@
+/**
+ * 主色调颜色
+ */
+$y-color-primary: #1890ff;
+$y-color-primary-dark: #096dd9;
+$y-color-primary-disabled: #69c0ff;
+$y-color-primary-light: #e6f7ff;
+
+/**
+ * 辅助颜色
+ */
+$y-color-error: #ff4d4f;
+$y-color-error-dark: #f5222d;
+$y-color-error-disabled: #ff7875;
+$y-color-error-light: #fff1f0;
+
+/**
+ * 警告色
+ */
+$y-color-warning:#faad14;
+$y-color-warning-dark:#d48806;
+$y-color-warning-disabled:#ffd666;
+$y-color-warning-light:#fffbe6;
+
+/**
+ * 成功色
+ */
+$y-color-success:#52c41a;
+$y-color-success-dark:#389e0d;
+$y-color-success-disabled:#95de64;
+$y-color-success-light:#f6ffed;
+
+/**
+ * 灰度颜色以及字体
+ */
+$y-gray-1:#fff;
+$y-gray-2:#fafafa;
+$y-gray-3:#f5f5f5;
+$y-gray-4:#f0f0f0;
+$y-gray-5:#d9d9d9;
+$y-gray-6:#bfbfbf;
+$y-gray-7:#8c8c8c;
+$y-gray-8:#595959;
+$y-gray-9:#434343;
+$y-gray-10:#262626;
+$y-gray-11:#1f1f1f;
+$y-gray-12:#141414;
+$y-gray-13:#000000;
+
+/**
+ * 定义当前全局的边框圆角的大小
+ */
+$y-border-radio:4rpx;
+
+/**
+ * 定义全局的阴影方向
+ */
+$y-shadow-1-up: 0 -1rpx 2rpx -2rpx rgba(#000,.16),0 -3rpx 6rpx 0 rgba(#000,.12),0 -5rpx 12rpx 4rpx rgba(#000,.09);
+$y-shadow-1-down: 0 1rpx 2rpx -2rpx rgba(#000,.16),0 3rpx 6rpx 0 rgba(#000,.12),0 5rpx 12rpx 4rpx rgba(#000,.09);
+$y-shadow-1-left: -1rpx 0 2rpx -2rpx rgba(#000,.16),-3rpx 0 6rpx 0 rgba(#000,.12),-5rpx 0 12rpx 4rpx rgba(#000,.09);
+$y-shadow-1-right:  1rpx 0 2rpx -2rpx rgba(#000,.16),3rpx 0 6rpx 0 rgba(#000,.12),5rpx 0 12rpx 4rpx rgba(#000,.09);
+@mixin y-shadow-1($color:#000,$dir:Down) {
+	@if ($dir == Up) {
+		box-shadow: 0 -1rpx 2rpx -2rpx rgba($color,.16),0 -3rpx 6rpx 0 rgba($color,.12),0 -5rpx 12rpx 4rpx rgba($color,.09);
+	} @else if($dir == Down){
+		box-shadow: 0 1rpx 2rpx -2rpx rgba($color,.16),0 3rpx 6rpx 0 rgba($color,.12),0 5rpx 12rpx 4rpx rgba($color,.09);
+	} @else if($dir == Left){
+		box-shadow: -1rpx 0 2rpx -2rpx rgba($color,.16),-3rpx 0 6rpx 0 rgba($color,.12),-5rpx 0 12rpx 4rpx rgba($color,.09);
+	}@else if($dir == Right){
+		box-shadow:  1rpx 0 2rpx -2rpx rgba($color,.16),3rpx 0 6rpx 0 rgba($color,.12),5rpx 0 12rpx 4rpx rgba($color,.09);
+	}
+}
+$y-shadow-2-up: 0 -3rpx 6rpx -4rpx rgba(#000,.12),0 -6rpx 16rpx 0 rgba(#000,.08),0 -9rpx 28rpx 8rpx rgba(#000,.05);
+$y-shadow-2-down: 0 3rpx 6rpx -4rpx rgba(#000,.12),0 6rpx 16rpx 0 rgba(#000,.08),0 9rpx 28rpx 8rpx rgba(#000,.05);
+$y-shadow-2-left: -3rpx 0 6rpx -4rpx rgba(#000,.12),-6rpx 0 16rpx 0 rgba(#000,.08),-9rpx 0 28rpx 8rpx rgba(#000,.05);
+$y-shadow-2-left: 3rpx 0 6rpx -4rpx rgba(#000,.12),6rpx 0 16rpx 0 rgba(#000,.08),9rpx 0 28rpx 8rpx rgba(#000,.05);
+@mixin y-shadow-2($color:#000,$dir:Down) {
+	@if ($dir == Up) {
+		box-shadow: 0 -3rpx 6rpx -4rpx rgba($color,.12),0 -6rpx 16rpx 0 rgba($color,.08),0 -9rpx 28rpx 8rpx rgba($color,.05);
+	} @else if($dir == Down){
+		box-shadow: 0 3rpx 6rpx -4rpx rgba($color,.12),0 6rpx 16rpx 0 rgba($color,.08),0 9rpx 28rpx 8rpx rgba($color,.05);
+	} @else if($dir == Left){
+		box-shadow: -3rpx 0 6rpx -4rpx rgba($color,.12),-6rpx 0 16rpx 0 rgba($color,.08),-9rpx 0 28rpx 8rpx rgba($color,.05);
+	}@else if($dir == Right){
+		box-shadow:  3rpx 0 6rpx -4rpx rgba($color,.12),6rpx 0 16rpx 0 rgba($color,.08),9rpx 0 28rpx 8rpx rgba($color,.05);
+	}
+}
+
+$y-shadow-3-up: 0 -6rpx 16rpx -8rpx rgba(#000,.08),0 -9rpx 28rpx 0 rgba(#000,.05),0 -12rpx 48rpx 16rpx rgba(#000,.03);
+$y-shadow-3-down: 0 6rpx 16rpx -8rpx rgba(#000,.08),0 9rpx 28rpx 0 rgba(#000,.05),0 12rpx 48rpx 16rpx rgba(#000,.03);
+$y-shadow-3-left: -6rpx 0 16rpx -8rpx rgba(#000,.08),-9rpx 0 28rpx 0 rgba(#000,.05),-12rpx 0 48rpx 16rpx rgba(#000,.03);
+$y-shadow-3-right: 6rpx 0 16rpx -8rpx rgba(#000,.08),9rpx 0 28rpx 0 rgba(#000,.05),12rpx 0 48rpx 16rpx rgba(#000,.03);
+
+@mixin y-shadow-3($color:#000,$dir:Down) {
+	@if ($dir == Up) {
+		box-shadow: 0 -6rpx 16rpx -8rpx rgba($color,.08),0 -9rpx 28rpx 0 rgba($color,.05),0 -12rpx 48rpx 16rpx rgba($color,.03);
+	} @else if($dir == Down){
+		box-shadow:0 6rpx 16rpx -8rpx rgba($color,.08),0 9rpx 28rpx 0 rgba($color,.05),0 12rpx 48rpx 16rpx rgba($color,.03);
+	} @else if($dir == Left){
+		box-shadow: -6rpx 0 16rpx -8rpx rgba($color,.08),-9rpx 0 28rpx 0 rgba($color,.05),-12rpx 0 48rpx 16rpx rgba($color,.03);
+	}@else if($dir == Right){
+		box-shadow: 6rpx 0 16rpx -8rpx rgba($color,.08),9rpx 0 28rpx 0 rgba($color,.05),12rpx 0 48rpx 16rpx rgba($color,.03);
+	}
+}
+
+/**
+ * 常用颜色以及行高处理
+ */
+$y-font-size-1:12rpx;
+$y-font-size-2:14rpx;
+$y-font-size-3:16rpx;
+$y-font-size-4:20rpx;
+$y-font-size-5:24rpx;
+$y-font-size-6:30rpx;
+$y-font-size-7:38rpx;
+$y-font-size-8:46rpx;
+$y-font-size-9:56rpx;
+$y-font-size-10:68rpx;
+$y-line-height-1:20rpx;
+$y-line-height-2:22rpx;
+$y-line-height-3:24rpx;
+$y-line-height-4:28rpx;
+$y-line-height-5:32rpx;
+$y-line-height-6:38rpx;
+$y-line-height-7:46rpx;
+$y-line-height-8:54rpx;
+$y-line-height-9:64rpx;
+$y-line-height-10:76rpx;
+
+/**
+ * 横向布局
+ */
+@mixin y-flex($align:center,$justify:center,$direction:row) {
+	display: flex;
+	align-items: $align;
+	justify-content: $justify;
+	flex-direction: $direction;
+}
+
+/**
+ * 纵向布局
+ */
+@mixin y-flex-column($align:center,$justify:center,$direction:row) {
+	@include y-flex($align,$justify,column);
+}
+
+/**
+ * 生成外间距
+ */
+@for $i from 0 to 10 {
+	@if $i==0 {
+		.y-m{margin: 5rpx;}
+		.y-ml{margin-left: 5rpx;}
+		.y-mr{margin-right: 5rpx;}
+		.y-mt{margin-top: 5rpx;}
+		.y-mb{margin-bottom: 5rpx;}
+	} @else {
+		.y-m-#{$i}{margin: 10rpx*$i;}
+		.y-ml-#{$i}{margin-left: 10rpx*$i;}
+		.y-mr-#{$i}{margin-right: 10rpx*$i;}
+		.y-mt-#{$i}{margin-top: 10rpx*$i;}
+		.y-mb-#{$i}{margin-bottom: 10rpx*$i;}
+	}
+}
+
+/**
+ * 生成内间距
+ */
+@for $i from 0 to 10 {
+	@if $i==0 {
+		.y-p{padding: 5rpx;}
+		.y-pl{padding-left: 5rpx;}
+		.y-pr{padding-right: 5rpx;}
+		.y-pt{padding-top: 5rpx;}
+		.y-pb{padding-bottom: 5rpx;}
+	} @else {
+		.y-p-#{$i}{padding: 10rpx*$i;}
+		.y-pl-#{$i}{padding-left: 10rpx*$i;}
+		.y-pr-#{$i}{padding-right: 10rpx*$i;}
+		.y-pt-#{$i}{padding-top: 10rpx*$i;}
+		.y-pb-#{$i}{padding-bottom: 10rpx*$i;}
+	}
+}
