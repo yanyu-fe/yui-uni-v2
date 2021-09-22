@@ -1,4 +1,13 @@
-// 取消自带的样式
+/**
+ * 删除默认自带的一些按钮的样式
+ */
+button::after { border: none; border-radius: 0rpx;}
 button{
-	
+	box-sizing: border-box;
+	border-radius: $y-border-radio;
+	font-size: $y-font-size-6;
 }
+
+/**
+ * 配置自定义的样式
+ */

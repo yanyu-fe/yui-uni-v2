@@ -24,5 +24,5 @@
 	// 引入公共样式文件
 	@import "../../style/common.scss";
 	// 自定义的样式库
-	@import "./button.scss";
+	@import "./y-button.scss";
 </style>

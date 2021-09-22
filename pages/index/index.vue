@@ -1,6 +1,6 @@
 <template>
 	<view class="">
-		
+		<y-button>测试</y-button>
 	</view>
 </template>
 
